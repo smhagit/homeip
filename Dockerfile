@@ -1,4 +1,4 @@
-FROM node:lts-alpine
+FROM arm32v7/node:lts-alpine3.10
 
 ADD ./build /
 

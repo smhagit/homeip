@@ -49,8 +49,9 @@ function sleep(sec) {
 }
 
 
-
-do {
-    checkAndUpdate();
-    await sleep(process.env.INTERVAL || 5400);
-} while (true);
+(async () => {
+    do {
+        checkAndUpdate();
+        await sleep(process.env.INTERVAL || 5400);
+    } while (true);
+})();
