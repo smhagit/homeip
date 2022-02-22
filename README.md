@@ -21,9 +21,18 @@ services:
     app:
         image: smhagit/homeip
         environment:
-            HETZNER_RECORD_ID: xxx
             HETZNER_ZONE_ID: xxx
-            HETZNER_RECORD_NAME: home # xxx.domain.tld
             HETZNER_API_TOKEN: xxx
             INTERVAL: 5400
+
+            # specify a single record
+            HETZNER_RECORD_ID: xxx
+            HETZNER_RECORD_NAME: home # xxx.domain.tld
+
+            # specify multiple records
+            HETZNER_RECORD_ID_1: xxx
+            HETZNER_RECORD_NAME_1: home # xxx.domain.tld
+            HETZNER_RECORD_ID_2: xxx
+            HETZNER_RECORD_NAME_2: another # another.domain.tld
+            # ...
 ```
